@@ -1,0 +1,3 @@
+EBT is 500.0
+Profit is 450.0
+Ratio is 1.1
