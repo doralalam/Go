@@ -4,20 +4,20 @@ import (
 	"fmt"
 
 	"example.com/tax_project/conversion"
-	"example.com/tax_project/filemanager"
+	"example.com/tax_project/iomanager"
 )
 
 // struct type
 type TaxStructure struct {
-	IOManager        filemanager.Filemanager `json:"-"` //to neglect the label in json
-	TaxRate          float64                 `json:"tax_rate"`
-	InputPrices      []float64               `json:"input_prices"`
-	TaxIncludedPrice map[string]string       `json:"tax_included_prices"`
+	IOManager        iomanager.IOmanager `json:"-"` //to neglect the label in json
+	TaxRate          float64             `json:"tax_rate"`
+	InputPrices      []float64           `json:"input_prices"`
+	TaxIncludedPrice map[string]string   `json:"tax_included_prices"`
 }
 
 // constructor
-func NewTaxObject(fm filemanager.Filemanager, tax float64) *TaxStructure {
-	return &TaxStructure{IOManager: fm,
+func NewTaxObject(iom iomanager.IOmanager, tax float64) *TaxStructure {
+	return &TaxStructure{IOManager: iom,
 		InputPrices: []float64{},
 		TaxRate:     tax,
 	}

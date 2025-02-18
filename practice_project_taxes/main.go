@@ -12,6 +12,7 @@ func main() {
 
 	for _, taxRate := range taxRates {
 		fm := filemanager.New("prices.txt", fmt.Sprintf("result_%v.json", taxRate))
+		//cmdm := cmdmanager.New()
 		newObject := prices.NewTaxObject(fm, taxRate)
 		newObject.Process()
 	}
