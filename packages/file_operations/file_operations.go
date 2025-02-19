@@ -1,4 +1,4 @@
-package fileOperations
+package file_operations
 
 import (
 	"errors"
