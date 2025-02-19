@@ -8,3 +8,4 @@ go 1.23.6
 // this can be later used as prefix while importing the packages
 // example import "example.com/bankPackage/fileOperatioins"
 // NOTE: Different packages must be in different directories. Otherwise, go will face the ambiguity
+// Always run the module from directory where main package resides
